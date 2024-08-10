@@ -1,13 +1,13 @@
 {
-    "name": "reactphp-x/laravel-zero",
-    "description": "The Laravel Zero Framework.",
-    "keywords": ["framework", "laravel", "laravel zero", "console", "cli"],
-    "homepage": "https://laravel-zero.com",
+    "name": "reactphp-x/reactphp-x",
+    "description": "The Reactphp Framework build top of Framework X and Larave zero.",
+    "keywords": ["Reactphp", "framework", "laravel", "laravel zero", "console", "cli"],
+    "homepage": "https://reactphp-x.com",
     "type": "project",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
-        "source": "https://github.com/laravel-zero/laravel-zero"
+        "issues": "https://github.com/reactphp-x/reactphp-x/issues",
+        "source": "https://github.com/reactphp-x/reactphp-x"
     },
     "authors": [
         {
