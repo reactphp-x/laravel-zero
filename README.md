@@ -27,19 +27,30 @@ http://127.0.0.1:8000
 
 ### Route
 
-routes/api
+routes/api.php
 
-```
-Route::get('/', function () {
-    return 'Hello World';
+```php
+use ReactphpX\LaravelReactphp\Facades\Route;
+use React\Http\Message\Response;
+use Psr\Http\Message\ServerRequestInterface;
+
+Route::get('/', function (ServerRequestInterface $request) {
+    return Response::plaintext(
+        "Hello wörld!\n"
+    );
 });
-Route::group(['prefix' => 'api'], function () {
-    Route::get('user', 'UserController@index');
-    Route::get('user/{id}', 'UserController@show');
-    Route::post('user', 'UserController@store');
-    Route::put('user/{id}', 'UserController@update');
-    Route::delete('user/{id}', 'UserController@destroy');
-});
+
+$class = new class {
+    public function index(ServerRequestInterface $request) {
+        return Response::plaintext(
+            "Hello wörld!\n"
+        );
+    }
+};
+
+Route::get('/at', get_class($class).'@index');
+
+// Route::get('/controller', 'App\Http\Controllers\IndexController@index');
 ```
 
 
