@@ -9,5 +9,5 @@ return [
             'daemonize' => env('REACTPHP_HTTP_DAEMONIZE', false),
         ],
     ],
-    'middlewares' => explode(',', env('REACTPHP_MIDDLEWARES', '')) ?: []
+    'middlewares' => array_filter(explode(',', env('REACTPHP_MIDDLEWARES', ''))) ?: []
 ];
