@@ -18,6 +18,7 @@
     "require": {
         "php": "^8.2.0",
         "laravel-zero/framework": "^11.0.0",
+        "reactphp-x/crontab": "^1.0",
         "reactphp-x/laravel-log": "^1.0",
         "reactphp-x/laravel-reactphp": "^1.0",
         "reactphp-x/orm": "^1.0"

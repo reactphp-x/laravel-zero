@@ -19,6 +19,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        if (config('cron.enabled')) {
+            require base_path('routes/cron.php');
+        }
     }
 }

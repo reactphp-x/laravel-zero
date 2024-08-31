@@ -9,5 +9,10 @@ return [
             'daemonize' => env('REACTPHP_HTTP_DAEMONIZE', false),
         ],
     ],
-    'middlewares' => array_filter(explode(',', env('REACTPHP_MIDDLEWARES', ''))) ?: []
+    'middlewares' => array_merge(array_filter(explode(',', env('REACTPHP_MIDDLEWARES', ''))) ?: [], [
+        // \App\Http\Middlewares\CrosMiddleware::class,
+        \App\Http\Middlewares\TrustedProxyMiddleware::class,
+        new \FrameworkX\AccessLogHandler(),
+        new \App\Http\Middlewares\ErrorHandler,
+    ])
 ];
