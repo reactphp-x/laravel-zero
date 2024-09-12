@@ -13,6 +13,5 @@ return [
         // \App\Http\Middlewares\CrosMiddleware::class,
         \App\Http\Middlewares\TrustedProxyMiddleware::class,
         new \FrameworkX\AccessLogHandler(),
-        new \App\Http\Middlewares\ErrorHandler,
     ])
 ];
