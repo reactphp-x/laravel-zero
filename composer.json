@@ -21,7 +21,7 @@
         "reactphp-x/crontab": "^1.0",
         "reactphp-x/laravel-log": "^1.0",
         "reactphp-x/laravel-reactphp": "^1.0",
-        "reactphp-x/orm": "^2.0@dev"
+        "reactphp-x/orm": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
