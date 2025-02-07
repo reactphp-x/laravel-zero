@@ -115,6 +115,19 @@ new Crontab('* * * * * *', function () {
 });
 ```
 
+### 异步ORM
+
+请参考 https://github.com/reactphp-x/orm，该项目已集成
+
+使用之前先配置数据库
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_USERNAME=root
+DB_PASSWORD=123456
+DB_DATABASE=xxxx
+```
 
 ## License
 
