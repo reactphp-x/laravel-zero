@@ -90,6 +90,45 @@ Route::middleware($middlware1,$middlware2)->group('/users', function () {
 });
 ```
 
+### Middleware
+
+```php
+use App\Http\Middlewares\ExampleMiddleware;
+
+Route::middleware(ExampleMiddleware::class)->group('/users', function () {
+    Route::get('/', function (ServerRequestInterface $request) {
+        return Response::plaintext(
+            "Hello wörld!\n"
+        );
+    });
+});
+```
+
+### Request Params
+
+```php
+// 获取请求头
+$serverParams = $request->getServerParams();
+// 获取请求参数
+$queryParams = $request->getQueryParams();
+// Content-Type: application/x-www-form-urlencoded or Content-Type: multipart/form-data
+$name = $request->getParsedBody()['name'] ?? 'World';
+// Content-Type: application/json
+$data = json_decode((string)$request->getBody());
+
+```
+
+### Controller
+
+```php
+use App\Http\Controllers\ExampleController;
+
+Route::get('/example', ExampleController::class.'@index');
+
+```
+
+
+
 ### cron
 
 routes/cron.php 默认开启，在 `config/cron.php` 设置 `enabled=false` 关闭
