@@ -3,6 +3,7 @@
 use ReactphpX\LaravelReactphp\Facades\Route;
 use React\Http\Message\Response;
 use Psr\Http\Message\ServerRequestInterface;
+use App\Http\Controllers\ExampleController;
 
 Route::get('/', function (ServerRequestInterface $request) {
     return Response::plaintext(
@@ -41,6 +42,9 @@ Route::group('/users', $middlware1, $middlware2, function () {
         );
     });
 });
+
+
+Route::get('/example', ExampleController::class.'@index');
 
 Route::middleware($middlware1,$middlware2)->group('/users1', function () {
     Route::get('/', function (ServerRequestInterface $request) {
