@@ -13,7 +13,7 @@ composer create-project reactphp-x/reactphp-x dev-master -vvv
 
 cp .env.example .env
 
-## run
+## 启动项目
 
 ```
 php artisan reactphp:http start
