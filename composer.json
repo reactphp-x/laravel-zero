@@ -1,5 +1,5 @@
 {
-    "name": "reactphp-x/reactphp-x",
+    "name": "reactphp-x/laravel-zero",
     "description": "The Reactphp Framework build top of Framework X and Larave zero.",
     "keywords": ["Reactphp", "framework", "laravel", "laravel zero", "console", "cli"],
     "homepage": "https://reactphp-x.com",
